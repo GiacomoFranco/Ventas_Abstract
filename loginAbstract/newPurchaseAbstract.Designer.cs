@@ -49,34 +49,7 @@ namespace loginAbstract
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pan_principal = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.pan_principal.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.pan_principal = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // btn_purchase
@@ -358,312 +331,23 @@ namespace loginAbstract
             this.textBox7.Size = new System.Drawing.Size(119, 23);
             this.textBox7.TabIndex = 33;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Location = new System.Drawing.Point(519, 164);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(0, 0);
-            this.panel1.TabIndex = 34;
-            // 
             // pan_principal
             // 
             this.pan_principal.AutoScroll = true;
             this.pan_principal.BackColor = System.Drawing.Color.Transparent;
-            this.pan_principal.Controls.Add(this.panel2);
-            this.pan_principal.Controls.Add(this.panel3);
-            this.pan_principal.Controls.Add(this.panel4);
             this.pan_principal.Location = new System.Drawing.Point(709, 266);
             this.pan_principal.Name = "pan_principal";
             this.pan_principal.Size = new System.Drawing.Size(766, 264);
-            this.pan_principal.TabIndex = 35;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BackgroundImage = global::loginAbstract.Properties.Resources.space1;
-            this.panel2.Controls.Add(this.button11);
-            this.panel2.Controls.Add(this.textBox19);
-            this.panel2.Controls.Add(this.textBox18);
-            this.panel2.Controls.Add(this.textBox17);
-            this.panel2.Controls.Add(this.textBox10);
-            this.panel2.Controls.Add(this.textBox9);
-            this.panel2.Controls.Add(this.textBox8);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(765, 74);
-            this.panel2.TabIndex = 0;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.BackgroundImage = global::loginAbstract.Properties.Resources.trash;
-            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.ForeColor = System.Drawing.Color.Transparent;
-            this.button11.Location = new System.Drawing.Point(694, 24);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(22, 26);
-            this.button11.TabIndex = 41;
-            this.button11.UseVisualStyleBackColor = false;
-            // 
-            // textBox19
-            // 
-            this.textBox19.BackColor = System.Drawing.Color.White;
-            this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox19.Font = new System.Drawing.Font("Publica Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox19.Location = new System.Drawing.Point(546, 27);
-            this.textBox19.Multiline = true;
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(102, 23);
-            this.textBox19.TabIndex = 42;
-            this.textBox19.Text = "300.000";
-            // 
-            // textBox18
-            // 
-            this.textBox18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox18.Font = new System.Drawing.Font("Publica Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(459, 27);
-            this.textBox18.Multiline = true;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(55, 23);
-            this.textBox18.TabIndex = 42;
-            this.textBox18.Text = "1";
-            // 
-            // textBox17
-            // 
-            this.textBox17.BackColor = System.Drawing.Color.White;
-            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox17.Font = new System.Drawing.Font("Publica Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(313, 27);
-            this.textBox17.Multiline = true;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(102, 23);
-            this.textBox17.TabIndex = 42;
-            this.textBox17.Text = "300.000";
-            // 
-            // textBox10
-            // 
-            this.textBox10.BackColor = System.Drawing.Color.White;
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Font = new System.Drawing.Font("Publica Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(232, 27);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(61, 23);
-            this.textBox10.TabIndex = 42;
-            this.textBox10.Text = "C40";
-            // 
-            // textBox9
-            // 
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Font = new System.Drawing.Font("Publica Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(25, 27);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(36, 23);
-            this.textBox9.TabIndex = 37;
-            this.textBox9.Text = "1";
-            // 
-            // textBox8
-            // 
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Font = new System.Drawing.Font("Publica Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(81, 13);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 46);
-            this.textBox8.TabIndex = 36;
-            this.textBox8.Text = "Camisa Amarilla";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.BackgroundImage = global::loginAbstract.Properties.Resources.space2;
-            this.panel3.Controls.Add(this.textBox16);
-            this.panel3.Controls.Add(this.textBox15);
-            this.panel3.Controls.Add(this.textBox14);
-            this.panel3.Controls.Add(this.textBox11);
-            this.panel3.Controls.Add(this.textBox12);
-            this.panel3.Controls.Add(this.textBox13);
-            this.panel3.Location = new System.Drawing.Point(0, 74);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(765, 74);
-            this.panel3.TabIndex = 39;
-            // 
-            // textBox16
-            // 
-            this.textBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox16.Font = new System.Drawing.Font("Publica Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(546, 27);
-            this.textBox16.Multiline = true;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(102, 23);
-            this.textBox16.TabIndex = 41;
-            this.textBox16.Text = "300.000";
-            // 
-            // textBox15
-            // 
-            this.textBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox15.Font = new System.Drawing.Font("Publica Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(459, 27);
-            this.textBox15.Multiline = true;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(55, 23);
-            this.textBox15.TabIndex = 40;
-            this.textBox15.Text = "1";
-            // 
-            // textBox14
-            // 
-            this.textBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox14.Font = new System.Drawing.Font("Publica Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(313, 28);
-            this.textBox14.Multiline = true;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(102, 23);
-            this.textBox14.TabIndex = 39;
-            this.textBox14.Text = "300.000";
-            // 
-            // textBox11
-            // 
-            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.Font = new System.Drawing.Font("Publica Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(232, 28);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(61, 23);
-            this.textBox11.TabIndex = 38;
-            this.textBox11.Text = "C41";
-            // 
-            // textBox12
-            // 
-            this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox12.Font = new System.Drawing.Font("Publica Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(25, 28);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(36, 23);
-            this.textBox12.TabIndex = 37;
-            this.textBox12.Text = "1";
-            // 
-            // textBox13
-            // 
-            this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox13.Enabled = false;
-            this.textBox13.Font = new System.Drawing.Font("Publica Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(81, 13);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(100, 46);
-            this.textBox13.TabIndex = 36;
-            this.textBox13.Text = "Camisa Azul";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.BackgroundImage = global::loginAbstract.Properties.Resources.space2;
-            this.panel4.Controls.Add(this.textBox20);
-            this.panel4.Controls.Add(this.textBox21);
-            this.panel4.Controls.Add(this.textBox22);
-            this.panel4.Controls.Add(this.textBox23);
-            this.panel4.Controls.Add(this.textBox24);
-            this.panel4.Controls.Add(this.textBox25);
-            this.panel4.Location = new System.Drawing.Point(0, 148);
-            this.panel4.Margin = new System.Windows.Forms.Padding(0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(765, 74);
-            this.panel4.TabIndex = 42;
-            // 
-            // textBox20
-            // 
-            this.textBox20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox20.Font = new System.Drawing.Font("Publica Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox20.Location = new System.Drawing.Point(546, 27);
-            this.textBox20.Multiline = true;
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(102, 23);
-            this.textBox20.TabIndex = 41;
-            this.textBox20.Text = "300.000";
-            // 
-            // textBox21
-            // 
-            this.textBox21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.textBox21.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox21.Font = new System.Drawing.Font("Publica Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox21.Location = new System.Drawing.Point(459, 27);
-            this.textBox21.Multiline = true;
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(55, 23);
-            this.textBox21.TabIndex = 40;
-            this.textBox21.Text = "1";
-            // 
-            // textBox22
-            // 
-            this.textBox22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.textBox22.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox22.Font = new System.Drawing.Font("Publica Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox22.Location = new System.Drawing.Point(313, 28);
-            this.textBox22.Multiline = true;
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(102, 23);
-            this.textBox22.TabIndex = 39;
-            this.textBox22.Text = "300.000";
-            // 
-            // textBox23
-            // 
-            this.textBox23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.textBox23.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox23.Font = new System.Drawing.Font("Publica Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox23.Location = new System.Drawing.Point(232, 28);
-            this.textBox23.Multiline = true;
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(61, 23);
-            this.textBox23.TabIndex = 38;
-            this.textBox23.Text = "C41";
-            // 
-            // textBox24
-            // 
-            this.textBox24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.textBox24.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox24.Font = new System.Drawing.Font("Publica Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox24.Location = new System.Drawing.Point(25, 28);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(36, 23);
-            this.textBox24.TabIndex = 37;
-            this.textBox24.Text = "1";
-            // 
-            // textBox25
-            // 
-            this.textBox25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.textBox25.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox25.Enabled = false;
-            this.textBox25.Font = new System.Drawing.Font("Publica Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox25.Location = new System.Drawing.Point(81, 13);
-            this.textBox25.Multiline = true;
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(100, 46);
-            this.textBox25.TabIndex = 36;
-            this.textBox25.Text = "Camisa Azul";
+            this.pan_principal.TabIndex = 36;
             // 
             // newPurchaseAbstract
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackgroundImage = global::loginAbstract.Properties.Resources.a;
             this.ClientSize = new System.Drawing.Size(1487, 769);
             this.Controls.Add(this.pan_principal);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
@@ -683,17 +367,11 @@ namespace loginAbstract
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_purchase);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "newPurchaseAbstract";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "      ";
-            this.pan_principal.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -720,29 +398,6 @@ namespace loginAbstract
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.FlowLayoutPanel pan_principal;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox25;
+        private System.Windows.Forms.Panel pan_principal;
     }
 }
