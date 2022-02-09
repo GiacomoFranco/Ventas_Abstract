@@ -35,17 +35,17 @@ namespace loginAbstract
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.nameTextbox = new System.Windows.Forms.TextBox();
+            this.DNITextbox = new System.Windows.Forms.TextBox();
+            this.DNIType = new System.Windows.Forms.ComboBox();
+            this.refSearchTextbox = new System.Windows.Forms.TextBox();
+            this.productTextbox = new System.Windows.Forms.TextBox();
+            this.priceTextbox = new System.Windows.Forms.TextBox();
+            this.amountTextbox = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.btn_AddProduct = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.refSearch = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -64,7 +64,8 @@ namespace loginAbstract
             this.btn_purchase.Location = new System.Drawing.Point(30, 123);
             this.btn_purchase.Name = "btn_purchase";
             this.btn_purchase.Size = new System.Drawing.Size(219, 36);
-            this.btn_purchase.TabIndex = 11;
+            this.btn_purchase.TabIndex = 0;
+            this.btn_purchase.TabStop = false;
             this.btn_purchase.UseVisualStyleBackColor = false;
             this.btn_purchase.Click += new System.EventHandler(this.btn_purchase_Click);
             // 
@@ -80,7 +81,8 @@ namespace loginAbstract
             this.button1.Location = new System.Drawing.Point(30, 174);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(219, 36);
-            this.button1.TabIndex = 11;
+            this.button1.TabIndex = 0;
+            this.button1.TabStop = false;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -96,7 +98,8 @@ namespace loginAbstract
             this.button2.Location = new System.Drawing.Point(30, 221);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(219, 36);
-            this.button2.TabIndex = 11;
+            this.button2.TabIndex = 0;
+            this.button2.TabStop = false;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -112,7 +115,8 @@ namespace loginAbstract
             this.button3.Location = new System.Drawing.Point(30, 274);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(219, 36);
-            this.button3.TabIndex = 11;
+            this.button3.TabIndex = 0;
+            this.button3.TabStop = false;
             this.button3.Text = " ";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -129,93 +133,94 @@ namespace loginAbstract
             this.button4.Location = new System.Drawing.Point(27, 680);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(219, 36);
-            this.button4.TabIndex = 12;
+            this.button4.TabIndex = 0;
+            this.button4.TabStop = false;
             this.button4.Text = " ";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // textBox1
+            // nameTextbox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Publica Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(400, 293);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(262, 20);
-            this.textBox1.TabIndex = 13;
+            this.nameTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.nameTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nameTextbox.Font = new System.Drawing.Font("Publica Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameTextbox.ForeColor = System.Drawing.Color.Black;
+            this.nameTextbox.Location = new System.Drawing.Point(400, 293);
+            this.nameTextbox.Name = "nameTextbox";
+            this.nameTextbox.Size = new System.Drawing.Size(262, 20);
+            this.nameTextbox.TabIndex = 1;
             // 
-            // textBox2
+            // DNITextbox
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Publica Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(400, 352);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(262, 20);
-            this.textBox2.TabIndex = 14;
+            this.DNITextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.DNITextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DNITextbox.Font = new System.Drawing.Font("Publica Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DNITextbox.ForeColor = System.Drawing.Color.Black;
+            this.DNITextbox.Location = new System.Drawing.Point(400, 352);
+            this.DNITextbox.Name = "DNITextbox";
+            this.DNITextbox.Size = new System.Drawing.Size(262, 20);
+            this.DNITextbox.TabIndex = 3;
             // 
-            // comboBox1
+            // DNIType
             // 
-            this.comboBox1.AllowDrop = true;
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.DNIType.AllowDrop = true;
+            this.DNIType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.DNIType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DNIType.Items.AddRange(new object[] {
             "C.C",
             "T.I",
             "C.E",
             "T.P"});
-            this.comboBox1.Location = new System.Drawing.Point(299, 351);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(74, 21);
-            this.comboBox1.TabIndex = 15;
+            this.DNIType.Location = new System.Drawing.Point(299, 351);
+            this.DNIType.Name = "DNIType";
+            this.DNIType.Size = new System.Drawing.Size(74, 21);
+            this.DNIType.TabIndex = 2;
             // 
-            // textBox3
+            // refSearchTextbox
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Publica Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(363, 495);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(271, 20);
-            this.textBox3.TabIndex = 16;
+            this.refSearchTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.refSearchTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.refSearchTextbox.Font = new System.Drawing.Font("Publica Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refSearchTextbox.ForeColor = System.Drawing.Color.Black;
+            this.refSearchTextbox.Location = new System.Drawing.Point(363, 495);
+            this.refSearchTextbox.Name = "refSearchTextbox";
+            this.refSearchTextbox.Size = new System.Drawing.Size(271, 20);
+            this.refSearchTextbox.TabIndex = 4;
             // 
-            // textBox4
+            // productTextbox
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Publica Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(404, 547);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(262, 20);
-            this.textBox4.TabIndex = 17;
+            this.productTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.productTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productTextbox.Font = new System.Drawing.Font("Publica Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productTextbox.ForeColor = System.Drawing.Color.Black;
+            this.productTextbox.Location = new System.Drawing.Point(404, 547);
+            this.productTextbox.Name = "productTextbox";
+            this.productTextbox.Size = new System.Drawing.Size(262, 20);
+            this.productTextbox.TabIndex = 6;
             // 
-            // textBox5
+            // priceTextbox
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Publica Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(385, 595);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(132, 20);
-            this.textBox5.TabIndex = 18;
+            this.priceTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.priceTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.priceTextbox.Font = new System.Drawing.Font("Publica Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.priceTextbox.ForeColor = System.Drawing.Color.Black;
+            this.priceTextbox.Location = new System.Drawing.Point(385, 595);
+            this.priceTextbox.Name = "priceTextbox";
+            this.priceTextbox.Size = new System.Drawing.Size(132, 20);
+            this.priceTextbox.TabIndex = 7;
             // 
-            // textBox6
+            // amountTextbox
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Enabled = false;
-            this.textBox6.Font = new System.Drawing.Font("Publica Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.Black;
-            this.textBox6.Location = new System.Drawing.Point(609, 594);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(53, 21);
-            this.textBox6.TabIndex = 24;
+            this.amountTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.amountTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.amountTextbox.Enabled = false;
+            this.amountTextbox.Font = new System.Drawing.Font("Publica Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.amountTextbox.ForeColor = System.Drawing.Color.Black;
+            this.amountTextbox.Location = new System.Drawing.Point(609, 594);
+            this.amountTextbox.Multiline = true;
+            this.amountTextbox.Name = "amountTextbox";
+            this.amountTextbox.Size = new System.Drawing.Size(53, 21);
+            this.amountTextbox.TabIndex = 8;
             // 
             // button7
             // 
@@ -233,6 +238,7 @@ namespace loginAbstract
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(13, 11);
             this.button7.TabIndex = 27;
+            this.button7.TabStop = false;
             this.button7.Text = "0";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -251,6 +257,7 @@ namespace loginAbstract
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(13, 11);
             this.button8.TabIndex = 28;
+            this.button8.TabStop = false;
             this.button8.Text = "0";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -268,25 +275,25 @@ namespace loginAbstract
             this.btn_AddProduct.Location = new System.Drawing.Point(295, 661);
             this.btn_AddProduct.Name = "btn_AddProduct";
             this.btn_AddProduct.Size = new System.Drawing.Size(236, 41);
-            this.btn_AddProduct.TabIndex = 29;
+            this.btn_AddProduct.TabIndex = 9;
             this.btn_AddProduct.UseVisualStyleBackColor = false;
             this.btn_AddProduct.Click += new System.EventHandler(this.btn_AddProduct_Click);
             // 
-            // button6
+            // refSearch
             // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.Transparent;
-            this.button6.Location = new System.Drawing.Point(632, 488);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(44, 34);
-            this.button6.TabIndex = 30;
-            this.button6.UseVisualStyleBackColor = false;
+            this.refSearch.BackColor = System.Drawing.Color.Transparent;
+            this.refSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.refSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.refSearch.FlatAppearance.BorderSize = 0;
+            this.refSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.refSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.refSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refSearch.ForeColor = System.Drawing.Color.Transparent;
+            this.refSearch.Location = new System.Drawing.Point(632, 488);
+            this.refSearch.Name = "refSearch";
+            this.refSearch.Size = new System.Drawing.Size(44, 34);
+            this.refSearch.TabIndex = 5;
+            this.refSearch.UseVisualStyleBackColor = false;
             // 
             // button9
             // 
@@ -301,7 +308,7 @@ namespace loginAbstract
             this.button9.Location = new System.Drawing.Point(718, 538);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(178, 41);
-            this.button9.TabIndex = 31;
+            this.button9.TabIndex = 11;
             this.button9.UseVisualStyleBackColor = false;
             // 
             // button10
@@ -317,8 +324,9 @@ namespace loginAbstract
             this.button10.Location = new System.Drawing.Point(910, 538);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(178, 41);
-            this.button10.TabIndex = 32;
+            this.button10.TabIndex = 12;
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // textBox7
             // 
@@ -330,6 +338,7 @@ namespace loginAbstract
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(119, 23);
             this.textBox7.TabIndex = 33;
+            this.textBox7.TabStop = false;
             // 
             // pan_principal
             // 
@@ -338,7 +347,7 @@ namespace loginAbstract
             this.pan_principal.Location = new System.Drawing.Point(709, 266);
             this.pan_principal.Name = "pan_principal";
             this.pan_principal.Size = new System.Drawing.Size(766, 264);
-            this.pan_principal.TabIndex = 36;
+            this.pan_principal.TabIndex = 10;
             // 
             // newPurchaseAbstract
             // 
@@ -351,17 +360,17 @@ namespace loginAbstract
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.refSearch);
             this.Controls.Add(this.btn_AddProduct);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button8);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.amountTextbox);
+            this.Controls.Add(this.priceTextbox);
+            this.Controls.Add(this.productTextbox);
+            this.Controls.Add(this.refSearchTextbox);
+            this.Controls.Add(this.DNIType);
+            this.Controls.Add(this.DNITextbox);
+            this.Controls.Add(this.nameTextbox);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -384,17 +393,17 @@ namespace loginAbstract
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox nameTextbox;
+        private System.Windows.Forms.TextBox DNITextbox;
+        private System.Windows.Forms.ComboBox DNIType;
+        private System.Windows.Forms.TextBox refSearchTextbox;
+        private System.Windows.Forms.TextBox productTextbox;
+        private System.Windows.Forms.TextBox priceTextbox;
+        private System.Windows.Forms.TextBox amountTextbox;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button btn_AddProduct;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button refSearch;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.TextBox textBox7;

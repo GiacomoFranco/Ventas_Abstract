@@ -15,7 +15,7 @@ namespace loginAbstract
         public newPurchaseAbstract()
         {
             InitializeComponent();
-            textBox6.Text = cant.ToString();
+            amountTextbox.Text = cant.ToString();
         }
 
         private void btn_purchase_Click(object sender, EventArgs e)
@@ -63,7 +63,7 @@ namespace loginAbstract
         {
             cant = ++cant;
 
-            textBox6.Text = cant.ToString();
+            amountTextbox.Text = cant.ToString();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -74,7 +74,7 @@ namespace loginAbstract
             }
 
 
-            textBox6.Text = cant.ToString();
+            amountTextbox.Text = cant.ToString();
         }
 
 
@@ -85,9 +85,10 @@ namespace loginAbstract
 
         private void crearVenta()
         {
-            Panel panelInfo= new Panel();
+            Panel panelInfo = new Panel();
             panelInfo.Dock = DockStyle.Top;
             panelInfo.Size = new System.Drawing.Size(765, 74);
+            panelInfo.Name = $"panelInfo_{count}";
             pan_principal.Controls.Add(panelInfo);
             panelInfo.BringToFront();
 
@@ -108,6 +109,13 @@ namespace loginAbstract
             deleteButton.Location = new System.Drawing.Point(694, 24);
             deleteButton.Size = new System.Drawing.Size(22, 26);
             deleteButton.UseVisualStyleBackColor = false;
+            deleteButton.Name = $"deleteButton_{count}";
+
+
+            deleteButton.Click += new System.EventHandler(this.deletePanel);
+
+            //MessageBox.Show(deleteButton.Name);
+
             panelInfo.Controls.Add(deleteButton);
 
             //Total
@@ -161,7 +169,7 @@ namespace loginAbstract
             panelInfo.Controls.Add(references);
 
             TextBox hash = new TextBox();
-            int hashIndex = count + 1; 
+            int hashIndex = count + 1;
             hash.BorderStyle = System.Windows.Forms.BorderStyle.None;
             hash.Font = new System.Drawing.Font("Publica Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             hash.Location = new System.Drawing.Point(25, 27);
@@ -215,5 +223,44 @@ namespace loginAbstract
             crearVenta();
         }
 
+
+
+        //private void ElimnarPanel(string panel)
+        //{
+            
+
+
+        //    var deletePanel = pan_principal.Controls.OfType<Panel>().
+        //                              Where(c => c.Name == panel).
+        //                              FirstOrDefault();
+
+
+        //    deletePanel.Visible = false;
+            
+        //}
+
+
+
+        private void deletePanel(object sender, EventArgs e)
+        {
+
+            Button btn = (Button)sender;
+            btn.Parent.Visible = false;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
