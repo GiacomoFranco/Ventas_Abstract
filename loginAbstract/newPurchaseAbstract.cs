@@ -1,4 +1,5 @@
-﻿using System;
+﻿using loginAbstract.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace loginAbstract
         {
             InitializeComponent();
             amountTextbox.Text = cant.ToString();
+            autoComplete();
         }
 
         private void btn_purchase_Click(object sender, EventArgs e)
@@ -75,6 +77,7 @@ namespace loginAbstract
 
 
             amountTextbox.Text = cant.ToString();
+
         }
 
 
@@ -246,8 +249,6 @@ namespace loginAbstract
 
             Button btn = (Button)sender;
             btn.Parent.Visible = false;
-
-
         }
 
 
@@ -261,6 +262,31 @@ namespace loginAbstract
         private void button10_Click(object sender, EventArgs e)
         {
 
+        }
+
+        ABSTRACTEntities baseDatos = new ABSTRACTEntities();
+        
+
+
+        private void refSearchTextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        void autoComplete()
+        {
+            AutoCompleteStringCollection lista = new AutoCompleteStringCollection();
+            IEnumerable<string> productos = from p in baseDatos.PRODUCTOS
+                                            orderby p.REFERENCIA
+                                            select p.REFERENCIA;
+
+            foreach (var a in productos)
+            {
+                lista.Add(a);
+            }
+
+            refSearchTextbox.AutoCompleteCustomSource = lista;
         }
     }
 }

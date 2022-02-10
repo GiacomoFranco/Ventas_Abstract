@@ -178,6 +178,8 @@ namespace loginAbstract
             // 
             // refSearchTextbox
             // 
+            this.refSearchTextbox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.refSearchTextbox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.refSearchTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.refSearchTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.refSearchTextbox.Font = new System.Drawing.Font("Publica Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -186,6 +188,7 @@ namespace loginAbstract
             this.refSearchTextbox.Name = "refSearchTextbox";
             this.refSearchTextbox.Size = new System.Drawing.Size(271, 20);
             this.refSearchTextbox.TabIndex = 4;
+            this.refSearchTextbox.TextChanged += new System.EventHandler(this.refSearchTextbox_TextChanged);
             // 
             // productTextbox
             // 
@@ -326,7 +329,6 @@ namespace loginAbstract
             this.button10.Size = new System.Drawing.Size(178, 41);
             this.button10.TabIndex = 12;
             this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // textBox7
             // 
