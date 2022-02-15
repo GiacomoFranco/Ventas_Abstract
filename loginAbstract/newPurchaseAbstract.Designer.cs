@@ -29,6 +29,7 @@ namespace loginAbstract
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(newPurchaseAbstract));
             this.btn_purchase = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -46,10 +47,11 @@ namespace loginAbstract
             this.button8 = new System.Windows.Forms.Button();
             this.btn_AddProduct = new System.Windows.Forms.Button();
             this.refSearch = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btn_Register = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.totalCostTextBox = new System.Windows.Forms.TextBox();
             this.pan_principal = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // btn_purchase
@@ -152,6 +154,8 @@ namespace loginAbstract
             // 
             // DNITextbox
             // 
+            this.DNITextbox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.DNITextbox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.DNITextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.DNITextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DNITextbox.Font = new System.Drawing.Font("Publica Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -182,18 +186,19 @@ namespace loginAbstract
             this.refSearchTextbox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.refSearchTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.refSearchTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.refSearchTextbox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.refSearchTextbox.Font = new System.Drawing.Font("Publica Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refSearchTextbox.ForeColor = System.Drawing.Color.Black;
             this.refSearchTextbox.Location = new System.Drawing.Point(363, 495);
             this.refSearchTextbox.Name = "refSearchTextbox";
             this.refSearchTextbox.Size = new System.Drawing.Size(271, 20);
             this.refSearchTextbox.TabIndex = 4;
-            this.refSearchTextbox.TextChanged += new System.EventHandler(this.refSearchTextbox_TextChanged);
             // 
             // productTextbox
             // 
             this.productTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.productTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productTextbox.Enabled = false;
             this.productTextbox.Font = new System.Drawing.Font("Publica Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productTextbox.ForeColor = System.Drawing.Color.Black;
             this.productTextbox.Location = new System.Drawing.Point(404, 547);
@@ -205,6 +210,7 @@ namespace loginAbstract
             // 
             this.priceTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.priceTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.priceTextbox.Enabled = false;
             this.priceTextbox.Font = new System.Drawing.Font("Publica Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priceTextbox.ForeColor = System.Drawing.Color.Black;
             this.priceTextbox.Location = new System.Drawing.Point(385, 595);
@@ -297,22 +303,24 @@ namespace loginAbstract
             this.refSearch.Size = new System.Drawing.Size(44, 34);
             this.refSearch.TabIndex = 5;
             this.refSearch.UseVisualStyleBackColor = false;
+            this.refSearch.Click += new System.EventHandler(this.refSearch_Click);
             // 
-            // button9
+            // btn_Register
             // 
-            this.button9.BackColor = System.Drawing.Color.Transparent;
-            this.button9.BackgroundImage = global::loginAbstract.Properties.Resources.register;
-            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.ForeColor = System.Drawing.Color.Transparent;
-            this.button9.Location = new System.Drawing.Point(718, 538);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(178, 41);
-            this.button9.TabIndex = 11;
-            this.button9.UseVisualStyleBackColor = false;
+            this.btn_Register.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Register.BackgroundImage = global::loginAbstract.Properties.Resources.register;
+            this.btn_Register.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Register.FlatAppearance.BorderSize = 0;
+            this.btn_Register.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btn_Register.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btn_Register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Register.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_Register.Location = new System.Drawing.Point(718, 538);
+            this.btn_Register.Name = "btn_Register";
+            this.btn_Register.Size = new System.Drawing.Size(178, 41);
+            this.btn_Register.TabIndex = 11;
+            this.btn_Register.UseVisualStyleBackColor = false;
+            this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
             // 
             // button10
             // 
@@ -329,18 +337,20 @@ namespace loginAbstract
             this.button10.Size = new System.Drawing.Size(178, 41);
             this.button10.TabIndex = 12;
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click_1);
             // 
-            // textBox7
+            // totalCostTextBox
             // 
-            this.textBox7.BackColor = System.Drawing.Color.White;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Publica Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.Black;
-            this.textBox7.Location = new System.Drawing.Point(1325, 545);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(119, 23);
-            this.textBox7.TabIndex = 33;
-            this.textBox7.TabStop = false;
+            this.totalCostTextBox.BackColor = System.Drawing.Color.White;
+            this.totalCostTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.totalCostTextBox.Enabled = false;
+            this.totalCostTextBox.Font = new System.Drawing.Font("Publica Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalCostTextBox.ForeColor = System.Drawing.Color.Black;
+            this.totalCostTextBox.Location = new System.Drawing.Point(1325, 545);
+            this.totalCostTextBox.Name = "totalCostTextBox";
+            this.totalCostTextBox.Size = new System.Drawing.Size(119, 23);
+            this.totalCostTextBox.TabIndex = 33;
+            this.totalCostTextBox.TabStop = false;
             // 
             // pan_principal
             // 
@@ -351,6 +361,11 @@ namespace loginAbstract
             this.pan_principal.Size = new System.Drawing.Size(766, 264);
             this.pan_principal.TabIndex = 10;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // newPurchaseAbstract
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -359,9 +374,9 @@ namespace loginAbstract
             this.BackgroundImage = global::loginAbstract.Properties.Resources.a;
             this.ClientSize = new System.Drawing.Size(1487, 769);
             this.Controls.Add(this.pan_principal);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.totalCostTextBox);
             this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
+            this.Controls.Add(this.btn_Register);
             this.Controls.Add(this.refSearch);
             this.Controls.Add(this.btn_AddProduct);
             this.Controls.Add(this.button7);
@@ -406,9 +421,10 @@ namespace loginAbstract
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button btn_AddProduct;
         private System.Windows.Forms.Button refSearch;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btn_Register;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox totalCostTextBox;
         private System.Windows.Forms.Panel pan_principal;
+        private System.Windows.Forms.Timer timer1;
     }
 }
