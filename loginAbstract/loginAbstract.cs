@@ -81,7 +81,7 @@ namespace loginAbstract
                 }
                 catch (Exception ex)
                 {
-                    //MessageBox.Show("Error: " + ex.ToString());
+                    MessageBox.Show("Error: " + ex.ToString());
                 }
                 finally
                 {
@@ -103,7 +103,7 @@ namespace loginAbstract
                 }
                 catch (Exception ex)
                 {
-                    //MessageBox.Show("Error: " + ex.ToString());
+                    MessageBox.Show("Error: " + ex.ToString());
                 }
                 finally
                 {

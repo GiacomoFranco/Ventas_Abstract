@@ -59,8 +59,7 @@ namespace loginAbstract
 
         //CONTROLADOR NUMERIC UP & DOWN
 
-
-        int cant = 1;
+        private int cant = 1;
 
         private void button7_Click(object sender, EventArgs e)
         {
@@ -83,10 +82,13 @@ namespace loginAbstract
 
 
 
+
+
+        //____________________________________________________________________________
+
         private int count = 0;
         private int totalCost = 0;
         private int numCompra = 1;
-
 
 
         private void crearVenta()
@@ -242,19 +244,14 @@ namespace loginAbstract
 
         }
 
-
-
-
-
-
-
+        //AÑADIR PRODUCTO AL CARRO DE COMPRAS
 
         private void btn_AddProduct_Click(object sender, EventArgs e)
         {
             crearVenta();
         }
 
-
+        //ELIMINAR PRODUCTO DEL CARRO DE COMPRAS
 
         private void deletePanel(object sender, EventArgs e)
         {
@@ -271,21 +268,9 @@ namespace loginAbstract
             btn.Parent.Visible = false;
         }
 
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-
-        }
-
         ABSTRACTEntities3 baseDatos = new ABSTRACTEntities3();
 
-
-
-        private void refSearchTextbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        //OPCIÓN AUTOCOMPLETADO
 
         void autoComplete()
         {
@@ -301,6 +286,8 @@ namespace loginAbstract
 
             refSearchTextbox.AutoCompleteCustomSource = lista;
         }
+
+        //BUSCAR REFERENCIA
 
         private void refSearch_Click(object sender, EventArgs e)
         {
@@ -321,8 +308,7 @@ namespace loginAbstract
 
         }
 
-
-        ///////////////////////TIMER//////////////////////////////
+        //TIMER
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -362,21 +348,39 @@ namespace loginAbstract
                 totalCostTextBox.Text = "";
             }
 
+
+            //var aPanelthere = pan_principal.Controls.OfType<Panel>().
+            //                       Where(c => c).
+            //                       FirstOrDefault();
+
+            if (count > 0 )
+            {
+                if (DNITextbox.Text == "" && DNIType.Text == "" && nameTextbox.Text == "")
+                {
+                    pictureBox1.Visible = true;
+                    pictureBox2.Image = global::loginAbstract.Properties.Resources.advert_c;
+                    pictureBox2.Size = new System.Drawing.Size(299, 117);
+                }
+                if (DNITextbox.Text != "" || DNIType.Text != "" || nameTextbox.Text != "")
+                {
+                    if (DNITextbox.Text == "" || DNIType.Text == "" || nameTextbox.Text == "")
+                    {
+                        pictureBox1.Visible = true;
+                        pictureBox2.Image = global::loginAbstract.Properties.Resources.llenar_campos_c1;
+                        pictureBox2.Size = new System.Drawing.Size(323, 117);
+
+                    }
+                }
+                if (DNITextbox.Text != "" && DNIType.Text != "" && nameTextbox.Text != "")
+                {
+                    pictureBox1.Visible = false;
+                }
+                
+            }
+
         }
 
-        private void prueba()
-        {
-            MessageBox.Show(totalCost.ToString());
-        }
-
-
-        private void button10_Click_1(object sender, EventArgs e)
-        {
-            prueba();
-        }
-
-
-
+        //REGISTRAR VENTA
 
         private void btn_Register_Click(object sender, EventArgs e)
         {
@@ -385,7 +389,10 @@ namespace loginAbstract
 
             //try
             //{
-                foreach (var p in paneles)
+
+            CONSULTA nuevoRegistro = new CONSULTA();
+
+            foreach (var p in paneles)
                 {
 
                     var textboxes = p.Controls.OfType<TextBox>();
@@ -401,7 +408,7 @@ namespace loginAbstract
                     var amountLbl = textboxes.Where(c => c.Name == "amountLbl").FirstOrDefault();
                     var total = textboxes.Where(d => d.Name == "totalLbl").FirstOrDefault();
 
-                    CONSULTA nuevoRegistro = new CONSULTA();
+                 
                     nuevoRegistro.HASH = numCompra;
                     nuevoRegistro.PRECIO_U = vUnit.Text;
                     nuevoRegistro.REFERENCIA = refLbl.Text;
@@ -411,15 +418,19 @@ namespace loginAbstract
                     nuevoRegistro.FECHA = fechaHoy;
                     nuevoRegistro.HORA = horaHoy;
 
-                    MessageBox.Show(nuevoRegistro.FECHA);
-                    MessageBox.Show(nuevoRegistro.HORA);
-
                     baseDatos.CONSULTA.Add(nuevoRegistro);
 
                     p.Visible = false;
+
+                if (DNITextbox.Text != "" && nameTextbox.Text != "" && DNIType.Text != "")
+                {
+                    nuevoRegistro.DNI = DNITextbox.Text;
                 }
 
                 baseDatos.SaveChanges();
+            }
+
+           
             //}
             //catch (DbEntityValidationException f)
             //{
@@ -433,6 +444,16 @@ namespace loginAbstract
             numCompra += 1;
 
 
+        }
+
+        private void msg_hover(object sender, EventArgs e)
+        {
+            pictureBox2.Visible = true;
+        }
+
+        private void msg_hover_leave(object sender, EventArgs e)
+        {
+            pictureBox2.Visible = false;
         }
     }
 }

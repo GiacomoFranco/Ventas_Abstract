@@ -29,12 +29,30 @@ namespace loginAbstract
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(queryAbstract));
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_purchase = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.aBSTRACTDataSet = new loginAbstract.ABSTRACTDataSet();
+            this.cONSULTABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cONSULTATableAdapter = new loginAbstract.ABSTRACTDataSetTableAdapters.CONSULTATableAdapter();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hASHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fECHADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hORADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dNIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rEFERENCIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRECIOUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cANTIDADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sUBTOTALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aBSTRACTDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cONSULTABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button4
@@ -119,12 +137,123 @@ namespace loginAbstract
             this.btn_purchase.UseVisualStyleBackColor = false;
             this.btn_purchase.Click += new System.EventHandler(this.btn_purchase_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn,
+            this.hASHDataGridViewTextBoxColumn,
+            this.fECHADataGridViewTextBoxColumn,
+            this.hORADataGridViewTextBoxColumn,
+            this.dNIDataGridViewTextBoxColumn,
+            this.rEFERENCIADataGridViewTextBoxColumn,
+            this.pRECIOUDataGridViewTextBoxColumn,
+            this.cANTIDADDataGridViewTextBoxColumn,
+            this.sUBTOTALDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.cONSULTABindingSource;
+            this.dataGridView1.GridColor = System.Drawing.Color.LightGray;
+            this.dataGridView1.Location = new System.Drawing.Point(283, 198);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridView1.Size = new System.Drawing.Size(1173, 530);
+            this.dataGridView1.TabIndex = 18;
+            // 
+            // aBSTRACTDataSet
+            // 
+            this.aBSTRACTDataSet.DataSetName = "ABSTRACTDataSet";
+            this.aBSTRACTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cONSULTABindingSource
+            // 
+            this.cONSULTABindingSource.DataMember = "CONSULTA";
+            this.cONSULTABindingSource.DataSource = this.aBSTRACTDataSet;
+            // 
+            // cONSULTATableAdapter
+            // 
+            this.cONSULTATableAdapter.ClearBeforeFill = true;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hASHDataGridViewTextBoxColumn
+            // 
+            this.hASHDataGridViewTextBoxColumn.DataPropertyName = "HASH";
+            this.hASHDataGridViewTextBoxColumn.HeaderText = "HASH";
+            this.hASHDataGridViewTextBoxColumn.Name = "hASHDataGridViewTextBoxColumn";
+            this.hASHDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fECHADataGridViewTextBoxColumn
+            // 
+            this.fECHADataGridViewTextBoxColumn.DataPropertyName = "FECHA";
+            this.fECHADataGridViewTextBoxColumn.HeaderText = "FECHA";
+            this.fECHADataGridViewTextBoxColumn.Name = "fECHADataGridViewTextBoxColumn";
+            this.fECHADataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hORADataGridViewTextBoxColumn
+            // 
+            this.hORADataGridViewTextBoxColumn.DataPropertyName = "HORA";
+            this.hORADataGridViewTextBoxColumn.HeaderText = "HORA";
+            this.hORADataGridViewTextBoxColumn.Name = "hORADataGridViewTextBoxColumn";
+            this.hORADataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dNIDataGridViewTextBoxColumn
+            // 
+            this.dNIDataGridViewTextBoxColumn.DataPropertyName = "DNI";
+            this.dNIDataGridViewTextBoxColumn.HeaderText = "DNI";
+            this.dNIDataGridViewTextBoxColumn.Name = "dNIDataGridViewTextBoxColumn";
+            this.dNIDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rEFERENCIADataGridViewTextBoxColumn
+            // 
+            this.rEFERENCIADataGridViewTextBoxColumn.DataPropertyName = "REFERENCIA";
+            this.rEFERENCIADataGridViewTextBoxColumn.HeaderText = "REFERENCIA";
+            this.rEFERENCIADataGridViewTextBoxColumn.Name = "rEFERENCIADataGridViewTextBoxColumn";
+            this.rEFERENCIADataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pRECIOUDataGridViewTextBoxColumn
+            // 
+            this.pRECIOUDataGridViewTextBoxColumn.DataPropertyName = "PRECIO_U";
+            this.pRECIOUDataGridViewTextBoxColumn.HeaderText = "PRECIO_U";
+            this.pRECIOUDataGridViewTextBoxColumn.Name = "pRECIOUDataGridViewTextBoxColumn";
+            this.pRECIOUDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cANTIDADDataGridViewTextBoxColumn
+            // 
+            this.cANTIDADDataGridViewTextBoxColumn.DataPropertyName = "CANTIDAD";
+            this.cANTIDADDataGridViewTextBoxColumn.HeaderText = "CANTIDAD";
+            this.cANTIDADDataGridViewTextBoxColumn.Name = "cANTIDADDataGridViewTextBoxColumn";
+            this.cANTIDADDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sUBTOTALDataGridViewTextBoxColumn
+            // 
+            this.sUBTOTALDataGridViewTextBoxColumn.DataPropertyName = "SUBTOTAL";
+            this.sUBTOTALDataGridViewTextBoxColumn.HeaderText = "SUBTOTAL";
+            this.sUBTOTALDataGridViewTextBoxColumn.Name = "sUBTOTALDataGridViewTextBoxColumn";
+            this.sUBTOTALDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // queryAbstract
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::loginAbstract.Properties.Resources.c;
             this.ClientSize = new System.Drawing.Size(1487, 769);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -134,6 +263,10 @@ namespace loginAbstract
             this.Name = "queryAbstract";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Abstract";
+            this.Load += new System.EventHandler(this.queryAbstract_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aBSTRACTDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cONSULTABindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -145,5 +278,18 @@ namespace loginAbstract
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_purchase;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private ABSTRACTDataSet aBSTRACTDataSet;
+        private System.Windows.Forms.BindingSource cONSULTABindingSource;
+        private ABSTRACTDataSetTableAdapters.CONSULTATableAdapter cONSULTATableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hASHDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fECHADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hORADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dNIDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rEFERENCIADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pRECIOUDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cANTIDADDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sUBTOTALDataGridViewTextBoxColumn;
     }
 }

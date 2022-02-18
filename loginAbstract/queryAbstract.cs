@@ -51,5 +51,17 @@ namespace loginAbstract
             LoginAbstract login = new LoginAbstract();
             login.Show();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void queryAbstract_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'aBSTRACTDataSet.CONSULTA' Puede moverla o quitarla según sea necesario.
+            this.cONSULTATableAdapter.Fill(this.aBSTRACTDataSet.CONSULTA);
+
+        }
     }
 }

@@ -448,7 +448,7 @@ namespace loginAbstract
             this.imgProduct.Size = new System.Drawing.Size(257, 194);
             this.imgProduct.TabIndex = 0;
             this.imgProduct.TabStop = false;
-            this.imgProduct.MouseHover += new System.EventHandler(this.hover_negro);
+
             // 
             // productName
             // 
