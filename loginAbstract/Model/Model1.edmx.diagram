@@ -4,13 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0a794765a9564053b4890d4e07aefc6e" Name="Diagram1">
+      <Diagram DiagramId="d4bb5ecb7c0645b2a97aef926f9dc168" Name="Diagram1">
         <EntityTypeShape EntityType="ABSTRACTModel.CLIENTE" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ABSTRACTModel.LOGIN" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ABSTRACTModel.RECORDAR" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ABSTRACTModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ABSTRACTModel.CONSULTA" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ABSTRACTModel.PRODUCTOS" Width="1.5" PointX="4.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ABSTRACTModel.CONSULTA" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ABSTRACTModel.LOGIN" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ABSTRACTModel.RECORDAR" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ABSTRACTModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ABSTRACTModel.PRODUCTOS" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

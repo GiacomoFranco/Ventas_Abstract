@@ -14,7 +14,8 @@ namespace loginAbstract.Model
     
     public partial class CONSULTA
     {
-        public Nullable<int> HASH { get; set; }
+        public int ID { get; set; }
+        public int HASH { get; set; }
         public string FECHA { get; set; }
         public string HORA { get; set; }
         public string DNI { get; set; }

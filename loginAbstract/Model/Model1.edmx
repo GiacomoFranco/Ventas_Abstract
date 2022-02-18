@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ABSTRACTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ABSTRACTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CLIENTE">
           <Key>
             <PropertyRef Name="DNI" />
@@ -13,23 +13,19 @@
           <Property Name="DNI_TYPE" Type="varchar(max)" Nullable="false" />
           <Property Name="DNI" Type="int" Nullable="false" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'ABSTRACT.dbo.CONSULTA' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="CONSULTA">
           <Key>
-            <PropertyRef Name="REFERENCIA" />
-            <PropertyRef Name="PRECIO_U" />
-            <PropertyRef Name="CANTIDAD" />
-            <PropertyRef Name="SUBTOTAL" />
+            <PropertyRef Name="ID" />
           </Key>
-          <Property Name="HASH" Type="int" />
-          <Property Name="FECHA" Type="nchar" MaxLength="10" />
-          <Property Name="HORA" Type="nchar" MaxLength="10" />
-          <Property Name="DNI" Type="nchar" MaxLength="10" />
-          <Property Name="REFERENCIA" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="PRECIO_U" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="CANTIDAD" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="SUBTOTAL" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HASH" Type="int" Nullable="false" />
+          <Property Name="FECHA" Type="varchar(max)" Nullable="false" />
+          <Property Name="HORA" Type="varchar(max)" Nullable="false" />
+          <Property Name="DNI" Type="varchar(max)" />
+          <Property Name="REFERENCIA" Type="varchar(max)" Nullable="false" />
+          <Property Name="PRECIO_U" Type="varchar(max)" Nullable="false" />
+          <Property Name="CANTIDAD" Type="varchar(max)" Nullable="false" />
+          <Property Name="SUBTOTAL" Type="varchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="LOGIN">
           <Key>
@@ -75,21 +71,10 @@ advertencia 6002: La tabla o vista 'ABSTRACT.dbo.PRODUCTOS' no tiene definida ni
         </EntityType>
         <EntityContainer Name="ABSTRACTModelStoreContainer">
           <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CONSULTA" EntityType="Self.CONSULTA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LOGIN" EntityType="Self.LOGIN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RECORDAR" EntityType="Self.RECORDAR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="CONSULTA" EntityType="Self.CONSULTA" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [CONSULTA].[HASH] AS [HASH], 
-    [CONSULTA].[FECHA] AS [FECHA], 
-    [CONSULTA].[HORA] AS [HORA], 
-    [CONSULTA].[DNI] AS [DNI], 
-    [CONSULTA].[REFERENCIA] AS [REFERENCIA], 
-    [CONSULTA].[PRECIO_U] AS [PRECIO_U], 
-    [CONSULTA].[CANTIDAD] AS [CANTIDAD], 
-    [CONSULTA].[SUBTOTAL] AS [SUBTOTAL]
-    FROM [dbo].[CONSULTA] AS [CONSULTA]</DefiningQuery>
-          </EntitySet>
           <EntitySet Name="PRODUCTOS" EntityType="Self.PRODUCTOS" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [PRODUCTOS].[PRODUCTO] AS [PRODUCTO], 
@@ -99,8 +84,7 @@ advertencia 6002: La tabla o vista 'ABSTRACT.dbo.PRODUCTOS' no tiene definida ni
     FROM [dbo].[PRODUCTOS] AS [PRODUCTOS]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ABSTRACTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -111,6 +95,20 @@ advertencia 6002: La tabla o vista 'ABSTRACT.dbo.PRODUCTOS' no tiene definida ni
           <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DNI_TYPE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DNI" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CONSULTA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HASH" Type="Int32" Nullable="false" />
+          <Property Name="FECHA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HORA" Type="String" FixedLength="false" Unicode="false" Nullable="false" MaxLength="Max" />
+          <Property Name="DNI" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="REFERENCIA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PRECIO_U" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CANTIDAD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SUBTOTAL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="LOGIN">
           <Key>
@@ -141,22 +139,6 @@ advertencia 6002: La tabla o vista 'ABSTRACT.dbo.PRODUCTOS' no tiene definida ni
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
-        <EntityType Name="CONSULTA">
-          <Key>
-            <PropertyRef Name="REFERENCIA" />
-            <PropertyRef Name="PRECIO_U" />
-            <PropertyRef Name="CANTIDAD" />
-            <PropertyRef Name="SUBTOTAL" />
-          </Key>
-          <Property Name="HASH" Type="Int32" />
-          <Property Name="FECHA" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="HORA" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="DNI" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="REFERENCIA" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="PRECIO_U" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="CANTIDAD" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="SUBTOTAL" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-        </EntityType>
         <EntityType Name="PRODUCTOS">
           <Key>
             <PropertyRef Name="PRODUCTO" />
@@ -168,12 +150,12 @@ advertencia 6002: La tabla o vista 'ABSTRACT.dbo.PRODUCTOS' no tiene definida ni
           <Property Name="PRECIO" Type="Int32" Nullable="false" />
           <Property Name="CATEGORIA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="ABSTRACTEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="ABSTRACTEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" />
+          <EntitySet Name="CONSULTA" EntityType="Self.CONSULTA" />
           <EntitySet Name="LOGIN" EntityType="Self.LOGIN" />
           <EntitySet Name="RECORDAR" EntityType="Self.RECORDAR" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
-          <EntitySet Name="CONSULTA" EntityType="Self.CONSULTA" />
           <EntitySet Name="PRODUCTOS" EntityType="Self.PRODUCTOS" />
         </EntityContainer>
       </Schema>
@@ -181,13 +163,28 @@ advertencia 6002: La tabla o vista 'ABSTRACT.dbo.PRODUCTOS' no tiene definida ni
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ABSTRACTModelStoreContainer" CdmEntityContainer="ABSTRACTEntities1">
+        <EntityContainerMapping StorageEntityContainer="ABSTRACTModelStoreContainer" CdmEntityContainer="ABSTRACTEntities3">
           <EntitySetMapping Name="CLIENTE">
             <EntityTypeMapping TypeName="ABSTRACTModel.CLIENTE">
               <MappingFragment StoreEntitySet="CLIENTE">
                 <ScalarProperty Name="NAME" ColumnName="NAME" />
                 <ScalarProperty Name="DNI_TYPE" ColumnName="DNI_TYPE" />
                 <ScalarProperty Name="DNI" ColumnName="DNI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CONSULTA">
+            <EntityTypeMapping TypeName="ABSTRACTModel.CONSULTA">
+              <MappingFragment StoreEntitySet="CONSULTA">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="HASH" ColumnName="HASH" />
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="HORA" ColumnName="HORA" />
+                <ScalarProperty Name="DNI" ColumnName="DNI" />
+                <ScalarProperty Name="REFERENCIA" ColumnName="REFERENCIA" />
+                <ScalarProperty Name="PRECIO_U" ColumnName="PRECIO_U" />
+                <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+                <ScalarProperty Name="SUBTOTAL" ColumnName="SUBTOTAL" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -220,20 +217,6 @@ advertencia 6002: La tabla o vista 'ABSTRACT.dbo.PRODUCTOS' no tiene definida ni
                 <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
                 <ScalarProperty Name="version" ColumnName="version" />
                 <ScalarProperty Name="definition" ColumnName="definition" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="CONSULTA">
-            <EntityTypeMapping TypeName="ABSTRACTModel.CONSULTA">
-              <MappingFragment StoreEntitySet="CONSULTA">
-                <ScalarProperty Name="HASH" ColumnName="HASH" />
-                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
-                <ScalarProperty Name="HORA" ColumnName="HORA" />
-                <ScalarProperty Name="DNI" ColumnName="DNI" />
-                <ScalarProperty Name="REFERENCIA" ColumnName="REFERENCIA" />
-                <ScalarProperty Name="PRECIO_U" ColumnName="PRECIO_U" />
-                <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
-                <ScalarProperty Name="SUBTOTAL" ColumnName="SUBTOTAL" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

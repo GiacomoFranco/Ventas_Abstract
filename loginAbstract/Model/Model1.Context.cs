@@ -13,10 +13,10 @@ namespace loginAbstract.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ABSTRACTEntities1 : DbContext
+    public partial class ABSTRACTEntities3 : DbContext
     {
-        public ABSTRACTEntities1()
-            : base("name=ABSTRACTEntities1")
+        public ABSTRACTEntities3()
+            : base("name=ABSTRACTEntities3")
         {
         }
     
@@ -26,10 +26,10 @@ namespace loginAbstract.Model
         }
     
         public virtual DbSet<CLIENTE> CLIENTE { get; set; }
+        public virtual DbSet<CONSULTA> CONSULTA { get; set; }
         public virtual DbSet<LOGIN> LOGIN { get; set; }
         public virtual DbSet<RECORDAR> RECORDAR { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<CONSULTA> CONSULTA { get; set; }
         public virtual DbSet<PRODUCTOS> PRODUCTOS { get; set; }
     }
 }

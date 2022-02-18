@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Validation;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -84,6 +85,7 @@ namespace loginAbstract
 
         private int count = 0;
         private int totalCost = 0;
+        private int numCompra = 1;
 
 
 
@@ -97,7 +99,7 @@ namespace loginAbstract
                 Panel panelInfo = new Panel();
                 panelInfo.Dock = DockStyle.Top;
                 panelInfo.Size = new System.Drawing.Size(765, 74);
-                panelInfo.Name = $"panelInfo_{count}";
+                panelInfo.Name = "panelInfo";
                 pan_principal.Controls.Add(panelInfo);
                 panelInfo.BringToFront();
 
@@ -122,8 +124,6 @@ namespace loginAbstract
 
 
                 deleteButton.Click += new System.EventHandler(this.deletePanel);
-
-                //MessageBox.Show(deleteButton.Name);
 
                 panelInfo.Controls.Add(deleteButton);
 
@@ -156,6 +156,7 @@ namespace loginAbstract
                 amount.Size = new System.Drawing.Size(55, 23);
                 amount.Size = new System.Drawing.Size(55, 23);
                 amount.Text = amountTextbox.Text;
+                amount.Name = "amountLbl";
                 panelInfo.Controls.Add(amount);
 
                 //Unit Price
@@ -168,6 +169,7 @@ namespace loginAbstract
                 unitPrice.Multiline = true;
                 unitPrice.Size = new System.Drawing.Size(102, 23);
                 unitPrice.Text = priceTextbox.Text;
+                unitPrice.Name = "UPriceLbl";
                 panelInfo.Controls.Add(unitPrice);
 
 
@@ -179,10 +181,11 @@ namespace loginAbstract
                 references.Multiline = true;
                 references.Size = new System.Drawing.Size(61, 23);
                 references.Text = refSearchTextbox.Text;
+                references.Name = "refLbl";
                 panelInfo.Controls.Add(references);
 
                 TextBox hash = new TextBox();
-                int hashIndex = count + 1;
+                int hashIndex = numCompra;
                 hash.BorderStyle = System.Windows.Forms.BorderStyle.None;
                 hash.Font = new System.Drawing.Font("Publica Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 hash.Location = new System.Drawing.Point(25, 27);
@@ -200,6 +203,7 @@ namespace loginAbstract
                 product.Multiline = true;
                 product.Size = new System.Drawing.Size(150, 46);
                 product.Text = productTextbox.Text;
+                product.Name = "productLbl";
                 panelInfo.Controls.Add(product);
 
                 //Odd or Even BACKGROUND
@@ -230,7 +234,7 @@ namespace loginAbstract
 
 
             }
-            else 
+            else
             {
                 MessageBox.Show("Todos los campos deben llenarse para añadir el producto al carro de compras ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -238,26 +242,17 @@ namespace loginAbstract
 
         }
 
+
+
+
+
+
+
+
         private void btn_AddProduct_Click(object sender, EventArgs e)
         {
             crearVenta();
         }
-
-
-
-        //private void ElimnarPanel(string panel)
-        //{
-
-
-
-        //    var deletePanel = pan_principal.Controls.OfType<Panel>().
-        //                              Where(c => c.Name == panel).
-        //                              FirstOrDefault();
-
-
-        //    deletePanel.Visible = false;
-
-        //}
 
 
 
@@ -277,19 +272,12 @@ namespace loginAbstract
         }
 
 
-
-
-
-
-
-
-
         private void button10_Click(object sender, EventArgs e)
         {
 
         }
 
-            ABSTRACTEntities1 baseDatos = new ABSTRACTEntities1();
+        ABSTRACTEntities3 baseDatos = new ABSTRACTEntities3();
 
 
 
@@ -338,22 +326,30 @@ namespace loginAbstract
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (baseDatos.PRODUCTOS.Count(x => x.REFERENCIA == refSearchTextbox.Text) > 0)
+            try
             {
-                var specificProduct = baseDatos.PRODUCTOS.Where(x => x.REFERENCIA == refSearchTextbox.Text).FirstOrDefault();
+                if (baseDatos.PRODUCTOS.Count(x => x.REFERENCIA == refSearchTextbox.Text) > 0)
+                {
+                    var specificProduct = baseDatos.PRODUCTOS.Where(x => x.REFERENCIA == refSearchTextbox.Text).FirstOrDefault();
 
-                productTextbox.Text = specificProduct.PRODUCTO;
-                priceTextbox.Text = specificProduct.PRECIO.ToString();
+                    productTextbox.Text = specificProduct.PRODUCTO;
+                    priceTextbox.Text = specificProduct.PRECIO.ToString();
+
+                }
+
+                if (baseDatos.CLIENTE.Count(d => d.DNI.ToString() == DNITextbox.Text) > 0)
+                {
+                    var DNId = baseDatos.CLIENTE.Where(d => d.DNI.ToString() == DNITextbox.Text).FirstOrDefault();
+
+                    nameTextbox.Text = DNId.NAME;
+                    DNIType.Text = DNId.DNI_TYPE;
+
+                }
 
             }
-
-            if (baseDatos.CLIENTE.Count(d => d.DNI.ToString() == DNITextbox.Text) > 0)
+            catch (Exception)
             {
-                var DNI = baseDatos.CLIENTE.Where(d => d.DNI.ToString() == DNITextbox.Text).FirstOrDefault();
-
-                nameTextbox.Text = DNI.NAME;
-                DNIType.Text = DNI.DNI_TYPE;
-
+                MessageBox.Show("not working");
             }
 
             if (totalCost > 0)
@@ -379,14 +375,63 @@ namespace loginAbstract
             prueba();
         }
 
+
+
+
         private void btn_Register_Click(object sender, EventArgs e)
         {
-            var reg = pan_principal.Controls.OfType<Panel>();
 
-            foreach (var item in reg)
-            {
-                //baseDatos.CONSULTA
-            }
+            IEnumerable<Panel> paneles = pan_principal.Controls.OfType<Panel>();
+
+            //try
+            //{
+                foreach (var p in paneles)
+                {
+
+                    var textboxes = p.Controls.OfType<TextBox>();
+
+                    DateTime fecha = DateTime.Today;
+                    string fechaHoy = fecha.ToShortDateString();
+                    string horaHoy = fecha.ToShortTimeString();
+
+ 
+
+                    var vUnit = textboxes.Where(a => a.Name == "UPriceLbl").FirstOrDefault();
+                    var refLbl = textboxes.Where(b => b.Name == "refLbl").FirstOrDefault();
+                    var amountLbl = textboxes.Where(c => c.Name == "amountLbl").FirstOrDefault();
+                    var total = textboxes.Where(d => d.Name == "totalLbl").FirstOrDefault();
+
+                    CONSULTA nuevoRegistro = new CONSULTA();
+                    nuevoRegistro.HASH = numCompra;
+                    nuevoRegistro.PRECIO_U = vUnit.Text;
+                    nuevoRegistro.REFERENCIA = refLbl.Text;
+                    nuevoRegistro.CANTIDAD = amountLbl.Text;
+                    nuevoRegistro.SUBTOTAL = total.Text;
+
+                    nuevoRegistro.FECHA = fechaHoy;
+                    nuevoRegistro.HORA = horaHoy;
+
+                    MessageBox.Show(nuevoRegistro.FECHA);
+                    MessageBox.Show(nuevoRegistro.HORA);
+
+                    baseDatos.CONSULTA.Add(nuevoRegistro);
+
+                    p.Visible = false;
+                }
+
+                baseDatos.SaveChanges();
+            //}
+            //catch (DbEntityValidationException f)
+            //{
+
+            //    MessageBox.Show(f.ToString());
+            //}
+           
+
+            MessageBox.Show("El registro se guardó debidamente");
+
+            numCompra += 1;
+
 
         }
     }

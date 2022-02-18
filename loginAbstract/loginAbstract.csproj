@@ -268,6 +268,19 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\4W.png" />
+    <None Include="Resources\3W.png" />
+    <None Include="Resources\2W.png" />
+    <None Include="Resources\1W.png" />
+    <None Include="Resources\4.png" />
+    <None Include="Resources\3.png" />
+    <None Include="Resources\2.png" />
+    <None Include="Resources\abs_black_forward.jpg" />
+    <None Include="Resources\Enmascarar grupo 1.png" />
+    <None Include="Resources\Rectángulo 74.png" />
+    <None Include="Resources\silk_legs_black_forward.jpg" />
+    <None Include="Resources\legs_black_forward1.jpg" />
+    <None Include="Resources\legs_black_forward.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

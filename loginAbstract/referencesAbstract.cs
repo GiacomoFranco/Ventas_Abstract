@@ -51,5 +51,20 @@ namespace loginAbstract
             LoginAbstract login = new LoginAbstract();
             login.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imgProduct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void hover_negro(object sender, EventArgs e)
+        {
+
+        }
     }
 }
