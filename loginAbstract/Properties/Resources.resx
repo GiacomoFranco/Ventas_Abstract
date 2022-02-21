@@ -139,9 +139,6 @@
   <data name="btnIngresar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnIngresar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="alert_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alert_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="alert_icon_p" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\alert_icon_p.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,41 +148,32 @@
   <data name="silk_legs_black_forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\silk_legs_black_forward.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="c" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\c.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="llenar_campos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\llenar_campos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rememberMeUnchecked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rememberMeUnchecked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="trash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="informBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\informBackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BB" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="register" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\register.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="space1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\space1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="b" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\b.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="informBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\informBackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="advert_c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\advert_c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="advert" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\advert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="d" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\d.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="d1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\d1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,8 +184,14 @@
   <data name="purchaseBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\purchaseBackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="legs_black_forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\legs_black_forward.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="register" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\register.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,32 +205,41 @@
   <data name="Grupo 17" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Grupo 17.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="loginWindowBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loginWindowBackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="up" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="loginWindowBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loginWindowBackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rectángulo 74" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rectángulo 74.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BW" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BW.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="advert_c" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\advert_c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="3W" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3W.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="space1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\space1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ekide" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ekide.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="queryBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\queryBackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="llenar_campos_c1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\llenar_campos_c1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="llenar_campos_c" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\llenar_campos_c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,28 +250,28 @@
   <data name="addProduct" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\addProduct.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1W" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1W.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="legs_black_forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\legs_black_forward.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Rectángulo 74" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Rectángulo 74.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="queryBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\queryBackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="alert_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alert_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="legs_black_forward1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\legs_black_forward1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="llenar_campos_c1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\llenar_campos_c1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Ecommerce campaign-rafiki" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ecommerce campaign-rafiki.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

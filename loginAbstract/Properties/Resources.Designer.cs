@@ -333,6 +333,16 @@ namespace loginAbstract.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ecommerce_campaign_rafiki {
+            get {
+                object obj = ResourceManager.GetObject("Ecommerce campaign-rafiki", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ekide {
             get {
                 object obj = ResourceManager.GetObject("ekide", resourceCulture);

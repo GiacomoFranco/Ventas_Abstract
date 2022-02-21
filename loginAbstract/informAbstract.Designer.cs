@@ -35,6 +35,9 @@ namespace loginAbstract
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_purchase = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // button4
@@ -119,12 +122,37 @@ namespace loginAbstract
             this.btn_purchase.UseVisualStyleBackColor = false;
             this.btn_purchase.Click += new System.EventHandler(this.btn_purchase_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::loginAbstract.Properties.Resources.Ecommerce_campaign_rafiki;
+            this.pictureBox2.Location = new System.Drawing.Point(515, 142);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(634, 556);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 19;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Publica Sans Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(40)))), ((int)(((byte)(250)))));
+            this.label1.Location = new System.Drawing.Point(628, 630);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(410, 32);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "DISPONIBLE EN LA VERSIÓN 0.2";
+            // 
             // informAbstract
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::loginAbstract.Properties.Resources.b;
             this.ClientSize = new System.Drawing.Size(1487, 769);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -134,7 +162,9 @@ namespace loginAbstract
             this.Name = "informAbstract";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Abstract";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -145,5 +175,7 @@ namespace loginAbstract
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_purchase;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label1;
     }
 }

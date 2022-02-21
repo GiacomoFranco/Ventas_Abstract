@@ -29,18 +29,17 @@ namespace loginAbstract
                 button10.Enabled = false;
             }
 
-
             IEnumerable<int> hashh = from p in baseDatos.CONSULTA
                                      select p.HASH;
 
             foreach (var item in hashh)
             {
-                if (item > max)
+                if (item >= max)
                 {
                     max = item + 1;
                 }
-            }
 
+            }
 
         }
 
@@ -279,7 +278,7 @@ namespace loginAbstract
 
             foreach (var item in hashh)
             {
-                if (item > max)
+                if (item >= max)
                 {
                     max = item + 1;
                 }
@@ -424,6 +423,7 @@ namespace loginAbstract
                 btn_Register.Enabled = false;
             }
 
+
         }
 
         //REGISTRAR VENTA
@@ -446,7 +446,7 @@ namespace loginAbstract
 
                     DateTime fecha = DateTime.Today;
                     string fechaHoy = fecha.ToShortDateString();
-                    string horaHoy = fecha.ToShortTimeString();
+                    string horaHoy = DateTime.Now.ToString("h:mm");
 
 
 

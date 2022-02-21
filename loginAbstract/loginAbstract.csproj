@@ -284,6 +284,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Ecommerce campaign-rafiki.png" />
     <None Include="Resources\llenar_campos_c1.png" />
     <None Include="Resources\llenar_campos_c.png" />
     <None Include="Resources\advert_c.png" />
