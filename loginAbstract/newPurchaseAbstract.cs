@@ -14,11 +14,34 @@ namespace loginAbstract
 {
     public partial class newPurchaseAbstract : Form
     {
+
+        int max = 1;
+
         public newPurchaseAbstract()
         {
             InitializeComponent();
             amountTextbox.Text = cant.ToString();
             autoComplete();
+
+            if (count == 0)
+            {
+                btn_Register.Enabled = false;
+                button10.Enabled = false;
+            }
+
+
+            IEnumerable<int> hashh = from p in baseDatos.CONSULTA
+                                     select p.HASH;
+
+            foreach (var item in hashh)
+            {
+                if (item > max)
+                {
+                    max = item + 1;
+                }
+            }
+
+
         }
 
         private void btn_purchase_Click(object sender, EventArgs e)
@@ -85,6 +108,9 @@ namespace loginAbstract
 
 
         //____________________________________________________________________________
+
+        ABSTRACTEntities3 baseDatos = new ABSTRACTEntities3();
+
 
         private int count = 0;
         private int totalCost = 0;
@@ -187,13 +213,12 @@ namespace loginAbstract
                 panelInfo.Controls.Add(references);
 
                 TextBox hash = new TextBox();
-                int hashIndex = numCompra;
                 hash.BorderStyle = System.Windows.Forms.BorderStyle.None;
                 hash.Font = new System.Drawing.Font("Publica Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 hash.Location = new System.Drawing.Point(25, 27);
                 hash.Enabled = false;
                 hash.Size = new System.Drawing.Size(36, 23);
-                hash.Text = hashIndex.ToString();
+                hash.Text = max.ToString();
                 panelInfo.Controls.Add(hash);
 
 
@@ -248,6 +273,18 @@ namespace loginAbstract
 
         private void btn_AddProduct_Click(object sender, EventArgs e)
         {
+            IEnumerable<int> hashh = from p in baseDatos.CONSULTA
+                                     select p.HASH;
+
+
+            foreach (var item in hashh)
+            {
+                if (item > max)
+                {
+                    max = item + 1;
+                }
+            }
+
             crearVenta();
         }
 
@@ -264,11 +301,14 @@ namespace loginAbstract
 
             totalCost -= Int32.Parse(tcount.Text);
 
+            count -= 1;
 
-            btn.Parent.Visible = false;
+            //btn.Parent.Visible = false;
+
+            Controls.Remove(btn.Parent);
+            btn.Parent.Dispose();
         }
 
-        ABSTRACTEntities3 baseDatos = new ABSTRACTEntities3();
 
         //OPCIÓN AUTOCOMPLETADO
 
@@ -349,17 +389,15 @@ namespace loginAbstract
             }
 
 
-            //var aPanelthere = pan_principal.Controls.OfType<Panel>().
-            //                       Where(c => c).
-            //                       FirstOrDefault();
-
-            if (count > 0 )
+            if (count > 0)
             {
                 if (DNITextbox.Text == "" && DNIType.Text == "" && nameTextbox.Text == "")
                 {
                     pictureBox1.Visible = true;
                     pictureBox2.Image = global::loginAbstract.Properties.Resources.advert_c;
                     pictureBox2.Size = new System.Drawing.Size(299, 117);
+                    btn_Register.Enabled = true;
+                    button10.Enabled = true;
                 }
                 if (DNITextbox.Text != "" || DNIType.Text != "" || nameTextbox.Text != "")
                 {
@@ -369,13 +407,21 @@ namespace loginAbstract
                         pictureBox2.Image = global::loginAbstract.Properties.Resources.llenar_campos_c1;
                         pictureBox2.Size = new System.Drawing.Size(323, 117);
 
+                        btn_Register.Enabled = false;
+
                     }
                 }
                 if (DNITextbox.Text != "" && DNIType.Text != "" && nameTextbox.Text != "")
                 {
                     pictureBox1.Visible = false;
+                    btn_Register.Enabled = true;
                 }
-                
+
+            }
+            if (count == 0)
+            {
+                pictureBox1.Visible = false;
+                btn_Register.Enabled = false;
             }
 
         }
@@ -393,23 +439,24 @@ namespace loginAbstract
             CONSULTA nuevoRegistro = new CONSULTA();
 
             foreach (var p in paneles)
+            {
+                if (p.Visible == true)
                 {
-
                     var textboxes = p.Controls.OfType<TextBox>();
 
                     DateTime fecha = DateTime.Today;
                     string fechaHoy = fecha.ToShortDateString();
                     string horaHoy = fecha.ToShortTimeString();
 
- 
+
 
                     var vUnit = textboxes.Where(a => a.Name == "UPriceLbl").FirstOrDefault();
                     var refLbl = textboxes.Where(b => b.Name == "refLbl").FirstOrDefault();
                     var amountLbl = textboxes.Where(c => c.Name == "amountLbl").FirstOrDefault();
                     var total = textboxes.Where(d => d.Name == "totalLbl").FirstOrDefault();
 
-                 
-                    nuevoRegistro.HASH = numCompra;
+
+                    nuevoRegistro.HASH = max;
                     nuevoRegistro.PRECIO_U = vUnit.Text;
                     nuevoRegistro.REFERENCIA = refLbl.Text;
                     nuevoRegistro.CANTIDAD = amountLbl.Text;
@@ -420,29 +467,28 @@ namespace loginAbstract
 
                     baseDatos.CONSULTA.Add(nuevoRegistro);
 
+                    if (DNITextbox.Text != "" && nameTextbox.Text != "" && DNIType.Text != "")
+                    {
+                        nuevoRegistro.DNI = DNITextbox.Text;
+                    }
+
+                    baseDatos.SaveChanges();
+
                     p.Visible = false;
 
-                if (DNITextbox.Text != "" && nameTextbox.Text != "" && DNIType.Text != "")
-                {
-                    nuevoRegistro.DNI = DNITextbox.Text;
                 }
 
-                baseDatos.SaveChanges();
+
+                numCompra += 1;
+                totalCost = 0;
+                count = 0;
+                
+
             }
 
-           
-            //}
-            //catch (DbEntityValidationException f)
-            //{
-
-            //    MessageBox.Show(f.ToString());
-            //}
-           
+            max += 1;
 
             MessageBox.Show("El registro se guardó debidamente");
-
-            numCompra += 1;
-
 
         }
 
