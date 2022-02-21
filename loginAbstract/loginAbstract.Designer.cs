@@ -33,9 +33,8 @@ namespace loginAbstract
             this.button1 = new System.Windows.Forms.Button();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.txt_usuario = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -79,23 +78,6 @@ namespace loginAbstract
             this.txt_usuario.Size = new System.Drawing.Size(440, 21);
             this.txt_usuario.TabIndex = 20;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.BackgroundImage = global::loginAbstract.Properties.Resources.Grupo_17;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(305, 467);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 25);
-            this.button2.TabIndex = 23;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.White;
@@ -114,15 +96,22 @@ namespace loginAbstract
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.BtnRecuerdame);
             // 
-            // button4
+            // button2
             // 
-            this.button4.Location = new System.Drawing.Point(1400, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 24;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Visible = false;
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Enabled = false;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(305, 467);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(200, 25);
+            this.button2.TabIndex = 23;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // LoginAbstract
             // 
@@ -130,7 +119,6 @@ namespace loginAbstract
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::loginAbstract.Properties.Resources.loginWindowBackground;
             this.ClientSize = new System.Drawing.Size(1487, 769);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -150,9 +138,8 @@ namespace loginAbstract
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.TextBox txt_usuario;
-        private System.Windows.Forms.Button button2;
         public System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button2;
     }
 }
 

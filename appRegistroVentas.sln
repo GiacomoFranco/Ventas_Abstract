@@ -5,16 +5,24 @@ VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "loginAbstract", "loginAbstract\loginAbstract.csproj", "{AC77FC0F-5458-442F-9DA9-CED613DB66F0}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetUpAbstract2", "SetUpAbstract2\SetUpAbstract2.vdproj", "{D7A80C69-CB04-4BCF-8C2A-B0BA756ECF7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		All|Any CPU = All|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC77FC0F-5458-442F-9DA9-CED613DB66F0}.All|Any CPU.ActiveCfg = Release|Any CPU
+		{AC77FC0F-5458-442F-9DA9-CED613DB66F0}.All|Any CPU.Build.0 = Release|Any CPU
 		{AC77FC0F-5458-442F-9DA9-CED613DB66F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AC77FC0F-5458-442F-9DA9-CED613DB66F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC77FC0F-5458-442F-9DA9-CED613DB66F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC77FC0F-5458-442F-9DA9-CED613DB66F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7A80C69-CB04-4BCF-8C2A-B0BA756ECF7D}.All|Any CPU.ActiveCfg = Debug
+		{D7A80C69-CB04-4BCF-8C2A-B0BA756ECF7D}.Debug|Any CPU.ActiveCfg = Debug
+		{D7A80C69-CB04-4BCF-8C2A-B0BA756ECF7D}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

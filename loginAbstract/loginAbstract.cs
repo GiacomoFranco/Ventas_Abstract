@@ -14,24 +14,34 @@ namespace loginAbstract
     public partial class LoginAbstract : Form
     {
 
+
+        
         public LoginAbstract()
         {
-
-
-            InitializeComponent();
-
-            string query = "SELECT * FROM RECORDAR";
-            SqlCommand comando = new SqlCommand(query, databaseConnect.Conexion);
-            SqlDataAdapter data = new SqlDataAdapter(comando);
-            DataTable table = new DataTable();
-            data.Fill(table);
-
-            if (table.Rows[0]["REGISTRO"].ToString() == "YES")
+            try
             {
-                txt_usuario.Text = table.Rows[0]["USER"].ToString();
-                txt_password.Text = table.Rows[0]["PASSWORD"].ToString();
-                button3.BackgroundImage = global::loginAbstract.Properties.Resources.rememberMeChecked;
+                InitializeComponent();
+
+                string query = "SELECT * FROM RECORDAR";
+                SqlCommand comando = new SqlCommand(query, databaseConnect.Conexion);
+                SqlDataAdapter data = new SqlDataAdapter(comando);
+                DataTable table = new DataTable();
+                data.Fill(table);
+
+                if (table.Rows[0]["REGISTRO"].ToString() == "YES")
+                {
+                    txt_usuario.Text = table.Rows[0]["USER"].ToString();
+                    txt_password.Text = table.Rows[0]["PASSWORD"].ToString();
+                    button3.BackgroundImage = global::loginAbstract.Properties.Resources.rememberMeChecked;
+                }
             }
+            catch (Exception)
+            {
+
+                
+            }
+
+           
         }
 
 
@@ -43,74 +53,83 @@ namespace loginAbstract
 
         private void BtnRecuerdame(object sender, EventArgs e)
         {
-            databaseConnect conectarLogin = new databaseConnect();
-
-            string query = "SELECT * FROM RECORDAR";
-            SqlCommand comando = new SqlCommand(query, databaseConnect.Conexion);
-            SqlDataAdapter data = new SqlDataAdapter(comando);
-            DataTable table = new DataTable();
-            data.Fill(table);
-
-         
-
-
-
-            if (table.Rows[0]["REGISTRO"].ToString() == "YES")
+            try
             {
-                count = 1;   
+                databaseConnect conectarLogin = new databaseConnect();
+
+                string query = "SELECT * FROM RECORDAR";
+                SqlCommand comando = new SqlCommand(query, databaseConnect.Conexion);
+                SqlDataAdapter data = new SqlDataAdapter(comando);
+                DataTable table = new DataTable();
+                data.Fill(table);
+
+
+
+
+
+                if (table.Rows[0]["REGISTRO"].ToString() == "YES")
+                {
+                    count = 1;
+                }
+
+                count = ++count;
+
+                if (count == 2)
+                {
+                    count = 0;
+                }
+
+                if (count % 2 != 0 && count != 0)
+                {
+                    button3.BackgroundImage = global::loginAbstract.Properties.Resources.rememberMeChecked;
+
+                    string rememberChecked = "UPDATE RECORDAR SET REGISTRO = 'YES' WHERE ID = '1'";
+
+                    SqlCommand cmd = new SqlCommand(rememberChecked, databaseConnect.Conexion);
+                    conectarLogin.AbrirConexion();
+                    try
+                    {
+                        int i = cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.ToString());
+                    }
+                    finally
+                    {
+                        // Cierro la Conexión.
+                        conectarLogin.CerrarConexion();
+                    }
+                }
+                else
+                {
+                    button3.BackgroundImage = global::loginAbstract.Properties.Resources.rememberMeUnchecked;
+
+                    string rememberChecked = "UPDATE RECORDAR SET REGISTRO = 'NO' WHERE ID = '1'";
+
+                    SqlCommand cmd = new SqlCommand(rememberChecked, databaseConnect.Conexion);
+                    conectarLogin.AbrirConexion();
+                    try
+                    {
+                        int i = cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.ToString());
+                    }
+                    finally
+                    {
+                        // Cierro la Conexión.
+                        conectarLogin.CerrarConexion();
+                    }
+                }
             }
-
-            count = ++count;
-
-            if (count == 2)
+            catch (Exception)
             {
-                count = 0;
+
+                MessageBox.Show("No hay bases de datos rey :(");
             }
-
-            if (count % 2 != 0 && count != 0)
-            {
-                button3.BackgroundImage = global::loginAbstract.Properties.Resources.rememberMeChecked;
-
-                string rememberChecked = "UPDATE RECORDAR SET REGISTRO = 'YES' WHERE ID = '1'";
-
-                SqlCommand cmd = new SqlCommand(rememberChecked, databaseConnect.Conexion);
-                conectarLogin.AbrirConexion();
-                try
-                {
-                    int i = cmd.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.ToString());
-                }
-                finally
-                {
-                    // Cierro la Conexión.
-                    conectarLogin.CerrarConexion();
-                }
-            }
-            else
-            {
-                button3.BackgroundImage = global::loginAbstract.Properties.Resources.rememberMeUnchecked;
-
-                string rememberChecked = "UPDATE RECORDAR SET REGISTRO = 'NO' WHERE ID = '1'";
-
-                SqlCommand cmd = new SqlCommand(rememberChecked, databaseConnect.Conexion);
-                conectarLogin.AbrirConexion();
-                try
-                {
-                    int i = cmd.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.ToString());
-                }
-                finally
-                {
-                    // Cierro la Conexión.
-                    conectarLogin.CerrarConexion();
-                }
-            }
+            
         }
 
 
